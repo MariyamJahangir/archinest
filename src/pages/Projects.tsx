@@ -1,0 +1,84 @@
+import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+import { projects } from "../data/projectsData";
+
+const PROJECT_TYPES = ["Residential", "Interior"];
+
+function Projects() {
+
+    const [activeType, setActiveType] = useState(PROJECT_TYPES[0]);
+
+    return (
+        <>
+            {/* Top Banner Section */}
+            <section
+                className="relative w-full h-[320px] md:h-[400px] lg:h-[480px] flex items-center justify-center bg-fixed bg-cover bg-center"
+                style={{
+                    backgroundImage:
+                        "url('https://i.pinimg.com/1200x/3f/6a/80/3f6a80457a718bfb3c31bc0d3b277ed7.jpg')",
+                }}
+            >
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                <h1 className="relative z-10 text-white text-4xl md:text-6xl font-bold text-center drop-shadow-xl">
+                    Projects
+                </h1>
+            </section>
+
+
+            <section className="relative bg-gray-200 min-h-screen py-10 px-2 bg-cover bg-center bg-fixed"
+                style={{ backgroundImage: `url('https://i.pinimg.com/1200x/f6/9b/72/f69b726eb3caeb017fb7c7dde393abd3.jpg')` }}>
+
+                <div className="absolute inset-0 bg-black/10 z-0 pointer-events-none" />
+                <div className="relative z-10">
+                    {/* Filter/toggle buttons */}
+                    <div className="flex gap-4 mb-8 justify-center">
+                        {PROJECT_TYPES.map((type) => (
+                            <button
+                                key={type}
+                                onClick={() => setActiveType(type)}
+                                className={`px-6 py-2 rounded border border-gray-400 transition
+                        ${activeType === type ? "bg-gray-300 text-gray-900 shadow font-semibold" : "bg-gray-300/60 text-gray-900"}
+                        `}
+                            >
+                                {type}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Card grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 max-w-6xl mx-auto">
+                        {projects
+                            .filter((p) => p.type === activeType)
+                            .map((proj, i) => (
+                                <div
+                                    key={proj.title}
+                                    className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col border border-gray-100"
+                                >
+                                    <img
+                                        src={proj.image}
+                                        alt={proj.title}
+                                        className="h-56 w-full object-cover"
+                                    />
+                                    <div className="p-4 grow flex flex-col justify-between">
+                                        <span className="text-gray-800 text-base ">{proj.title}</span>
+                                        <Link
+                                            to={`/project/${proj.title.toLowerCase().replace(/\s+/g, '-')}`}
+                                            className="inline-block border border-gray-600 px-6 py-2 text-gray-800 rounded hover:bg-gray-800 hover:text-white transition self-end mt-2"
+                                        >
+                                            View Project
+                                        </Link>
+                                    </div>
+                                </div>
+                            ))}
+                    </div>
+                </div>
+            </section>
+
+
+
+
+        </>
+    );
+}
+
+export default Projects;

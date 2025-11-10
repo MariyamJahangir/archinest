@@ -1,0 +1,208 @@
+import React, { useState, useRef } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
+
+const logoUrl = "/archinest logo white.png";
+
+const navItems = [
+  { name: 'HOME', path: '/' },
+  { name: 'WHO WE ARE', path: '/who-we-are' },
+  {
+    name: 'WHAT WE OFFER',
+    subpages: [
+    
+      { name: 'Interiors', path: '/interiors' },
+      { name: 'Exteriors', path: '/exteriors' },
+      { name: 'Landscaping', path: '/landscaping' },
+    ]
+  },
+  { name: 'PROJECTS', path: '/projects' },
+
+  { name: 'REACH US', path: '/reach-us' }
+];
+
+const socialLinks = [
+  { name: 'Facebook', url: 'https://facebook.com', icon: <FaFacebookF /> },
+  { name: 'Instagram', url: 'https://instagram.com', icon: <FaInstagram /> },
+  { name: 'YouTube', url: 'https://youtube.com', icon: <FaYoutube /> },
+  { name: 'LinkedIn', url: 'https://linkedin.com', icon: <FaLinkedin /> }
+];
+
+const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState<string>("");
+  const [hoverDropdown, setHoverDropdown] = useState<string | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+
+  const handleMouseEnter = (name: string) => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+    setHoverDropdown(name);
+  };
+
+  const handleMouseLeave = () => {
+    timerRef.current = setTimeout(() => {
+      setHoverDropdown(null);
+    }, 200);
+  };
+
+
+  return (
+    <header className="bg-zinc-900/90 fixed w-full top-0 z-50 text-white">
+      <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-24">
+        {/* Logo */}
+        <div>
+          <Link to="/">
+            <img src={logoUrl} alt="Archinest Logo" className="h-14" />
+          </Link>
+        </div>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex space-x-8 items-center">
+          {navItems.map((item) => (
+            <div
+              key={item.name}
+              className="relative"
+              onMouseEnter={() => item.subpages && handleMouseEnter(item.name)}
+              onMouseLeave={() => item.subpages && handleMouseLeave()}
+            >
+              {!item.subpages ? (
+                <NavLink
+                  to={item.path}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "uppercase text-[#FFA345] font-semibold tracking-wide"
+                      : "uppercase text-white hover:text-[#FFA345] transition tracking-wide"
+                  }
+                >
+                  {item.name}
+                </NavLink>
+              ) : (
+                <>
+                  <span className="uppercase text-white hover:text-[#FFA345] transition tracking-wide font-semibold cursor-pointer block py-2 px-3">
+                    {item.name}
+                  </span>
+                  {/* Dropdown visibility controlled by react state for timing */}
+                  <div
+                    className={`absolute left-0 mt-1 min-w-[200px] bg-zinc-900 rounded-lg shadow-lg z-50 transition-opacity duration-200 ${hoverDropdown === item.name ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+                      }`}
+                  >
+                    {item.subpages.map((sub) => (
+                      <NavLink
+                        key={sub.name}
+                        to={sub.path}
+                        className={({ isActive }) =>
+                          isActive
+                            ? "block px-4 py-2 text-[#FFA345] font-semibold bg-[#23242A]"
+                            : "block px-4 py-2 text-white hover:bg-[#23242A] transition"
+                        }
+                      >
+                        {sub.name}
+                      </NavLink>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+          ))}
+        </nav>
+
+        {/* Contact Icon */}
+        <div className="hidden md:flex items-center mr-6">
+          <Link to="/reach-us" className="bg-zinc-900 rounded-full p-2 mr-4">
+            <FaPhoneAlt />
+          </Link>
+        </div>
+
+        {/* Social Media Icons */}
+        <div className="hidden md:flex space-x-4">
+          {socialLinks.map(link => (
+            <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="p-2 bg-emerald-700 rounded-full hover:bg-white hover:text-black transition">
+              {link.icon}
+            </a>
+          ))}
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+            className="text-white hover:text-[#FFA345] focus:outline-none focus:ring-2 focus:ring-[#FFA345] rounded"
+          >
+            {mobileMenuOpen ? (
+              <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
+              </svg>
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <nav className="md:hidden bg-[#191A1E] shadow-md">
+          <ul className="flex flex-col py-4 space-y-1">
+            {navItems.map((item) => (
+              <li key={item.name}>
+                {!item.subpages ? (
+                  <NavLink
+                    to={item.path}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "block px-4 py-2 uppercase text-[#FFA345] font-semibold border-l-4 border-[#FFA345] bg-[#23242A]"
+                        : "block px-4 py-2 uppercase text-white hover:bg-[#23242A]"
+                    }
+                  >
+                    {item.name}
+                  </NavLink>
+                ) : (
+                  <>
+                    <span
+                      className="block px-4 py-2 uppercase text-white font-semibold cursor-pointer"
+                      onClick={() => setMobileDropdown(mobileDropdown === item.name ? "" : item.name)}
+                    >
+                      {item.name}
+                    </span>
+                    {mobileDropdown === item.name && (
+                      <ul className="ml-6 mt-1">
+                        {item.subpages.map((sub) => (
+                          <li key={sub.name}>
+                            <NavLink
+                              to={sub.path}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="block px-4 py-2 text-sm text-white hover:text-[#FFA345] hover:bg-[#23242A]"
+                            >
+                              {sub.name}
+                            </NavLink>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                )}
+              </li>
+            ))}
+            <li className="flex justify-center space-x-4 mt-4">
+              {socialLinks.map(link => (
+                <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="text-[#19B3B1] hover:text-[#FFA345] transition">
+                  {link.icon}
+                </a>
+              ))}
+            </li>
+          </ul>
+        </nav>
+      )}
+    </header>
+  );
+};
+
+export default Header;
