@@ -44,7 +44,7 @@ function Home() {
     setStatusMessage("");
     try {
       console.log('formdata: ', formData);
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://formsubmit.co/ajax/hello@aieera.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
