@@ -10,10 +10,9 @@ const navItems = [
   {
     name: 'WHAT WE OFFER', path: '/what-we-offer',
     subpages: [
-
-      { name: 'Interiors', path: '#interiors' },
-      { name: 'Exteriors', path: '#exteriors' },
-      { name: 'Landscaping', path: '#landscaping' },
+      { name: 'Interiors', path: '/what-we-offer#interiors' },
+      { name: 'Exteriors', path: '/what-we-offer#exteriors' },
+      { name: 'Landscaping', path: '/what-we-offer#landscaping' },
     ]
   },
   { name: 'PROJECTS', path: '/projects' },

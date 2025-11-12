@@ -1,16 +1,21 @@
-import React, { useRef } from "react";
+import { useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 import { motion, useScroll, useTransform } from "framer-motion";
 
-function Services() {
-    // const sectionRef = useRef(null);
+const Services = () => {
 
-    // const { scrollYProgress } = useScroll({
-    //     target: sectionRef,
-    //     offset: ["start end", "end start"],
-    // });
+    const location = useLocation();
 
-    // const x = useTransform(scrollYProgress, [0, 1], [0, -300]);
-
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+    
     return (
         <div
             className="relative bg-cover bg-center bg-fixed"
@@ -51,7 +56,7 @@ function Services() {
                 {/* Glassmorphism Card */}
                 <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-10 w-full max-w-md backdrop-blur-sm bg-black/5 rounded-3xl shadow-2xl p-8 border border-black/20">
                     <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-black">
-                        Crafted with Passion,<br />Made for You!!
+                        Interiors <br />Crafted with Passion,<br />Made for You!!
                     </h2>
                     <p className="text-md text-black/75 font-medium leading-relaxed">
                         Have a unique idea or a special project in mind? Archinest is excited to collaborate with you on custom designs.
@@ -88,7 +93,7 @@ function Services() {
                 {/* Glassmorphism Card */}
                 <div className="absolute right-8 top-1/2 transform -translate-y-1/2 z-10 w-full max-w-md backdrop-blur-md bg-white/10 rounded-3xl shadow-2xl p-8 border border-white/30">
                     <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">
-                        Crafted with Passion,<br />Made for You!!
+                        Exteriors <br />Crafted with Passion,<br />Made for You!!
                     </h2>
                     <p className="text-md text-white/75 font-medium leading-relaxed">
                         Have a unique idea or a special project in mind? Archinest Associate is excited to collaborate with you on custom designs.
@@ -125,7 +130,7 @@ function Services() {
                 {/* Glassmorphism Card */}
                 <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-10 w-full max-w-md backdrop-blur-sm bg-black/5 rounded-3xl shadow-2xl p-8 border border-black/20">
                     <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-black">
-                        Crafted with Passion,<br />Made for You!!
+                        Landscaping <br />Crafted with Passion,<br />Made for You!!
                     </h2>
                     <p className="text-md text-black/75 font-medium leading-relaxed">
                         Have a unique idea or a special project in mind? JANO ENTERPRISE is excited to collaborate with you on custom designs.

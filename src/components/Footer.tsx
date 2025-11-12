@@ -112,7 +112,7 @@ function Footer() {
           <div className="font-bold text-lg mb-2">Services</div>
           <ul>
             <li className="mb-1">Turnkey Projects</li>
-            <li className="mb-1">Total Consultancy</li>
+            
             <li className="mb-1">Interior Design</li>
             <li className="mb-1">Landscape</li>
           </ul>
