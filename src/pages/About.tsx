@@ -181,7 +181,7 @@ function About() {
                                     muted
                                     loop
                                     playsInline className="w-full h-[280px] object-cover bg-black">
-                                    <source src="/client project kallambalam out new.mp4" type="video/mp4" />
+                                    <source src="/House_Interior_Design.mp4" type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
