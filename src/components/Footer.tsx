@@ -34,10 +34,10 @@ function Footer() {
 
 
       {/* Top */}
-      <div className="w-full mx-auto flex flex-col md:flex-row items-center md:items-start justify-between p-10 ">
+      <div className="w-full mx-auto flex flex-col md:flex-row items-center md:items-start justify-between p-10 gap-4">
         {/* Logo and About */}
-        <div className="flex-1 flex flex-col items-center md:items-start mb-8 md:mb-0 px-10">
-          <img src="/archinest logo white.png" alt="Logo" className="w-[80%] mb-2" />
+        <div className="flex-1 flex flex-col items-center md:items-start md:mb-0 px-10 ">
+          <img src="/archinest logo white.png" alt="Logo" className="w-[70%] mb-2" />
 
         </div>
         {/* Offices */}
@@ -63,7 +63,7 @@ function Footer() {
               </div>
             </div>
             {/* Office 2 */}
-            <div>
+            {/* <div>
               <div className="flex flex-col items-center">
                 <span className="text-3xl mb-2">🏢</span>
                 <div className="font-semibold text-lg">TVM OFFICE</div>
@@ -80,20 +80,23 @@ function Footer() {
                   Get Directions
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
+  {/* About/desc (hidden on mobile) */}
+        <div className="flex-2 flex flex-col items-center">
+         <p className="mt-4 max-w-md text-gray-300 text-sm leading-relaxed px-10">
+            At Archinest Associates Pvt Ltd, imagination blends seamlessly with precision. Established in 2015 by a passionate designer, We are dedicated to creating personalized interior concepts that capture each client’s individuality. 
+          </p>
+        </div>
+
+
       </div>
       {/* Divider */}
       <hr className="my-6 border-gray-700 mx-16" />
       {/* Bottom grid */}
-      <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-sm px-12">
-        {/* About/desc (hidden on mobile) */}
-        <div className="md:col-span-2 md:block hidden px-6 text-justify">
-          <p className="mt-4 max-w-md text-gray-300 text-sm leading-relaxed">
-            At Archinest Associates Pvt Ltd, imagination blends seamlessly with precision. Established in 2015 by a passionate designer, We are dedicated to creating personalized interior concepts that capture each client’s individuality. With years of experience in the field, our founder has continually redefined modern design by balancing creativity with practical elegance. We strive to turn every space into a timeless expression of style, comfort, and inspiration.
-          </p>
-        </div>
+      <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-sm px-12">
+      
         {/* Quick Links */}
         <div className="md:col-span-1">
           <div className="font-bold text-lg mb-2">Quick Links</div>

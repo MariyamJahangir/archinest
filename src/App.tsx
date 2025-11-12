@@ -5,12 +5,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 
 
-import Interiors from './pages/Interiors';
-import Exteriors from './pages/Exteriors';
-import Landscaping from './pages/Landscaping';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import ProjectDetails from './pages/ProjectDetails';
+import Services from './pages/Services';
 
 function App() {
   return (
@@ -19,14 +17,11 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="who-we-are" element={<About />} />
-         
+          <Route path="what-we-offer" element={<Services />} />
 
-          <Route path="interiors" element={<Interiors />} />
-          <Route path="exteriors" element={<Exteriors />} />
-         <Route path="landscaping" element={<Landscaping />} />
           <Route path="projects" element={<Projects />} />
           <Route path="reach-us" element={<Contact />} />
-           <Route path="/project/:title" element={<ProjectDetails />} />
+          <Route path="/project/:title" element={<ProjectDetails />} />
         </Route>
       </Routes>
     </Router>

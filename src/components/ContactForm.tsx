@@ -41,7 +41,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, submitting = false,
     <>
       <form className="space-y-4" onSubmit={handleSubmit}>
         <input
-          className="w-full border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400 text-lg"
+          className="w-full h-[45px] border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400 text-md"
           type="text"
           name="name"
           placeholder="Name"
@@ -50,7 +50,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, submitting = false,
           required
         />
         <input
-          className="w-full border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400 text-lg"
+          className="w-full h-[45px] border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400 text-md"
           type="text"
           name="phone"
           placeholder="Phone"
@@ -59,7 +59,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, submitting = false,
           required
         />
         <input
-          className="w-full border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400 text-lg"
+          className="w-full h-[45px] border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400 text-md"
           type="email"
           name="email"
           placeholder="Email"
@@ -68,7 +68,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, submitting = false,
           required
         />
         <textarea
-          className="w-full border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400 text-lg"
+          className="w-full h-[120px] border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400 text-md"
           rows={4}
           name="message"
           placeholder="Message"
@@ -80,7 +80,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, submitting = false,
         <button
           type="submit"
           disabled={submitting}
-          className="mt-2 w-full bg-yellow-900 hover:bg-yellow-800 text-white py-4 rounded-lg text-xl font-semibold transition disabled:opacity-60"
+          className="mt-2 flex justify-center items-center w-full h-[45px] bg-emerald-600 hover:bg-[#19B3B1] text-white py-4 rounded-lg text-md font-semibold transition disabled:opacity-60"
         >
           {submitting ? "Sending..." : "Send"}
         </button>

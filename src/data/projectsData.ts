@@ -5,6 +5,7 @@ export type Project = {
   title: string;
   type: string;
   description?: string;
+  sqft?: string;
 };
 
 export const projects: Project[] = [
@@ -18,6 +19,7 @@ export const projects: Project[] = [
       "https://i.pinimg.com/1200x/88/5a/6d/885a6d4cc34027c511c1a8512036dcd7.jpg"
     ],
     description: "This 4BHK urban home blends modern style with functional interiors, creating a perfect living space for the family.",
+    sqft: '2000sqft',
   },
   {
     image: "https://i.pinimg.com/1200x/f5/9a/fe/f59afec929bf15ff2518d4b440e23bd7.jpg",
@@ -28,6 +30,7 @@ export const projects: Project[] = [
       "https://i.pinimg.com/1200x/3e/36/62/3e366239e6f8dd34a7b70310512b3c0e.jpg"
     ],
     description: "Elegant villa with exquisite interiors and outdoor spaces.",
+    sqft:'2500sqft',
   },
   {
     image: "https://i.pinimg.com/1200x/30/ab/8e/30ab8e9864c53ac1b59781d0b75fc012.jpg",
@@ -38,6 +41,7 @@ export const projects: Project[] = [
       "https://i.pinimg.com/1200x/cb/b7/4a/cbb74a234930dc3964e2a22a25e7173e.jpg",
     ],
     description: "Modern and comfortable 3BHK residence blending style and functionality.",
+    sqft: '3200sqft',
   },
   {
     image: "https://i.pinimg.com/1200x/30/ab/8e/30ab8e9864c53ac1b59781d0b75fc012.jpg",
@@ -48,6 +52,7 @@ export const projects: Project[] = [
       "https://i.pinimg.com/1200x/d2/90/e9/d290e9bfb5ff2509d4ff59c154ee3a0e.jpg",
     ],
     description: "Minimalist design emphasizing space and light for a serene family home.",
+    sqft: '1500sqft',
   },
   {
     image: "https://i.pinimg.com/1200x/1a/9a/8f/1a9a8fe4ec9879c01377cc6aac823306.jpg",
@@ -58,6 +63,7 @@ export const projects: Project[] = [
       "https://i.pinimg.com/1200x/e9/fc/1c/e9fc1cff10e08061cb2546fbdbbe46de.jpg",
     ],
     description: "Peaceful retreat blending nature and luxury in Aluva.",
+    sqft: '3700sqft',
   },
   {
     image: "https://i.pinimg.com/1200x/f5/9a/fe/f59afec929bf15ff2518d4b440e23bd7.jpg",
@@ -68,6 +74,7 @@ export const projects: Project[] = [
       "https://i.pinimg.com/1200x/1a/9a/8f/1a9a8fe4ec9879c01377cc6aac823306.jpg",
     ],
     description: "Warm and inviting interiors for a cozy family home.",
+    sqft: '3400sqft',
   },
   {
     image: "https://i.pinimg.com/1200x/b3/6d/6d/b36d6dbc796b9adb2971331fe125240f.jpg",
@@ -78,6 +85,7 @@ export const projects: Project[] = [
       "https://i.pinimg.com/1200x/f5/9a/fe/f59afec929bf15ff2518d4b440e23bd7.jpg",
     ],
     description: "Modern open office interior promoting collaboration and creativity.",
+    sqft: '2500sqft',
   },
   {
     image: "https://i.pinimg.com/1200x/30/32/46/303246161f84df67f6852a4804da9052.jpg",
@@ -88,5 +96,6 @@ export const projects: Project[] = [
       "https://i.pinimg.com/1200x/f5/9a/fe/f59afec929bf15ff2518d4b440e23bd7.jpg",
     ],
     description: "Elegant and sophisticated living room with luxurious finishes.",
+    sqft: '1800sqft',
   },
 ];

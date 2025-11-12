@@ -6,7 +6,7 @@ const slides = [
     {
         title: "VISION",
         content:
-            "To consistently deliver eco-friendly world class finishes at each point of our designing, execute and complete all the projects in a manner to create an ambience that will echo the desires of our clients’ hearts. To accomplish the concepts of practical designs by breaking the boundaries of spacial or budget constraints, cherishing the thoughts of ‘Dream Home’ and creating a world which reflects the clients’ and help them to transcend their life style in harmony with nature."
+            "To consistently deliver eco-friendly world class finishes at each point of our designing, execute and complete all the projects in a manner to create an ambience that will echo the desires of our clients’ hearts. "
     },
     {
         title: "MISSION",
@@ -110,8 +110,8 @@ function About() {
                         </h1>
                         <p className="text-lg text-gray-800 mt-8 mb-2">
                             We believe every space tells a story — one that inspires, comforts, and connects.
-With a blend of creativity, precision, and purpose, our team transforms ideas into timeless designs.
-From concept to completion, we craft environments that reflect individuality, enhance well-being, and celebrate the art of living beautifully.
+                            With a blend of creativity, precision, and purpose, our team transforms ideas into timeless designs.
+                            From concept to completion, we craft environments that reflect individuality, enhance well-being, and celebrate the art of living beautifully.
                         </p>
                     </div>
 
@@ -128,42 +128,23 @@ From concept to completion, we craft environments that reflect individuality, en
             <section
                 className="relative w-full min-h-[600px] flex items-center justify-center bg-cover bg-center"
                 style={{
-                    backgroundImage: "url('https://i.pinimg.com/1200x/49/6b/a1/496ba1456d87d5e12a42dade7483d52a.jpg')" // Replace with your actual image path
+                    backgroundImage: "url('https://i.pinimg.com/1200x/a9/2f/49/a92f49ba72809cef7d0f18cac20b333a.jpg')" // Replace with your actual image path
                 }}
             >
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-40"></div>
                 {/* Carousel Card */}
-                <div className="relative z-10 w-full max-w-2xl mx-auto bg-emerald-950/70 text-white rounded-xl shadow-2xl px-8 py-10 flex flex-col items-center">
+                <div className='flex flex-row gap-3 justify-center items-center p-20'>
+                <div className="relative z-10 w-full h-[300px] max-w-2xl mx-3 bg-emerald-950/70 text-white rounded-xl shadow-2xl px-8 py-10 flex flex-col items-center">
+                    <h2 className="text-4xl font-extrabold mb-4 text-center">{slides[index+1].title}</h2>
+                    <p className="text-lg font-medium mb-8 text-center">{slides[index+1].content}</p>
+                   
+                </div>
+                <div className="relative z-10 w-full h-[300px] max-w-2xl mx-3 bg-emerald-950/70 text-white rounded-xl shadow-2xl px-8 py-10 flex flex-col items-center">
                     <h2 className="text-4xl font-extrabold mb-4 text-center">{slides[index].title}</h2>
                     <p className="text-lg font-medium mb-8 text-center">{slides[index].content}</p>
-                    {/* Carousel Arrows */}
-                    <div className="flex items-center justify-between w-full max-w-sm mx-auto mb-4">
-                        <button
-                            aria-label="Previous"
-                            onClick={prevSlide}
-                            className="text-2xl p-2 bg-emerald-800/80 rounded-full hover:bg-emerald-700/70 transition"
-                        >
-                            &#8592;
-                        </button>
-                        <button
-                            aria-label="Next"
-                            onClick={nextSlide}
-                            className="text-2xl p-2 bg-emerald-800/80 rounded-full hover:bg-emerald-700/70 transition"
-                        >
-                            &#8594;
-                        </button>
-                    </div>
-
-                    {/* Dots */}
-                    <div className="flex justify-center gap-2 mt-2">
-                        {slides.map((_, idx) => (
-                            <span
-                                key={idx}
-                                className={`h-2 w-2 rounded-full ${index === idx ? "bg-white" : "bg-gray-500"}`}
-                            />
-                        ))}
-                    </div>
+                   
+                </div>
                 </div>
             </section>
 
@@ -189,32 +170,43 @@ From concept to completion, we craft environments that reflect individuality, en
                     {/* Videos carousel grid */}
                     <div className="flex items-center w-full justify-center relative gap-8 mt-4 mb-6">
                         {/* Left arrow */}
-                        <button className="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 rounded-full text-3xl bg-black/60 text-white p-2 hover:bg-black/80 transition">
+                        {/* <button className="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 rounded-full text-3xl bg-black/60 text-white p-2 hover:bg-black/80 transition">
                             &#8592;
-                        </button>
+                        </button> */}
                         <div className="flex gap-8 w-full justify-center">
                             {/* Video 1 */}
                             <div className="bg-white rounded-xl overflow-hidden shadow-xl max-w-md w-[60%]">
-                                <video controls className="w-full h-[280px] object-cover bg-black">
-                                    <source src="/video1.mp4" type="video/mp4" />
+                                <video controls
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline className="w-full h-[280px] object-cover bg-black">
+                                    <source src="/client project kallambalam out new.mp4" type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             {/* Video 2 */}
                             <div className="bg-white rounded-xl overflow-hidden shadow-xl max-w-md w-[60%]">
-                                <video controls className="w-full h-[280px] object-cover bg-black">
-                                    <source src="/video2.mp4" type="video/mp4" />
+                                <video
+                                    controls
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    className="w-full h-[280px] object-cover bg-black"
+                                >
+                                    <source src="/House_Interior_Design.mp4" type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                         </div>
                         {/* Right arrow */}
-                        <button className="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 rounded-full text-3xl bg-black/60 text-white p-2 hover:bg-black/80 transition">
+                        {/* <button className="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 rounded-full text-3xl bg-black/60 text-white p-2 hover:bg-black/80 transition">
                             &#8594;
-                        </button>
+                        </button> */}
                     </div>
                     {/* Visit Channel Button */}
-                    <div className="mt-6 mb-12">
+                    {/* <div className="mt-6 mb-12">
                         <a
                             href="https://youtube.com/@yourchannel"
                             target="_blank"
@@ -223,7 +215,7 @@ From concept to completion, we craft environments that reflect individuality, en
                         >
                             Visit our Channel
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 

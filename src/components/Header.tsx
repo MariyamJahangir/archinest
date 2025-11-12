@@ -8,12 +8,12 @@ const navItems = [
   { name: 'HOME', path: '/' },
   { name: 'WHO WE ARE', path: '/who-we-are' },
   {
-    name: 'WHAT WE OFFER',
+    name: 'WHAT WE OFFER', path: '/what-we-offer',
     subpages: [
-    
-      { name: 'Interiors', path: '/interiors' },
-      { name: 'Exteriors', path: '/exteriors' },
-      { name: 'Landscaping', path: '/landscaping' },
+
+      { name: 'Interiors', path: '#interiors' },
+      { name: 'Exteriors', path: '#exteriors' },
+      { name: 'Landscaping', path: '#landscaping' },
     ]
   },
   { name: 'PROJECTS', path: '/projects' },
@@ -51,12 +51,12 @@ const Header = () => {
 
 
   return (
-    <header className="bg-zinc-900/90 fixed w-full top-0 z-50 text-white">
-      <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-24">
+    <header className="fixed w-[90%] px-3 top-0 z-50 text-white bg-black/20 backdrop-blur-lg rounded-[50px] shadow-xl border border-white/20 mx-auto mt-4 left-0 right-0 max-w-7xl">
+      <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
         {/* Logo */}
         <div>
           <Link to="/">
-            <img src={logoUrl} alt="Archinest Logo" className="h-14" />
+            <img src={logoUrl} alt="Archinest Logo" className="h-10" />
           </Link>
         </div>
 
@@ -74,34 +74,41 @@ const Header = () => {
                   to={item.path}
                   className={({ isActive }) =>
                     isActive
-                      ? "uppercase text-[#FFA345] font-semibold tracking-wide"
-                      : "uppercase text-white hover:text-[#FFA345] transition tracking-wide"
+                      ? "uppercase text-[#19B3B1] font-semibold tracking-wide "
+                      : "uppercase text-white hover:text-[#19B3B1] transition tracking-wide "
                   }
                 >
                   {item.name}
                 </NavLink>
               ) : (
                 <>
-                  <span className="uppercase text-white hover:text-[#FFA345] transition tracking-wide font-semibold cursor-pointer block py-2 px-3">
-                    {item.name}
-                  </span>
-                  {/* Dropdown visibility controlled by react state for timing */}
+
+                  <NavLink
+                    to={item.path}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "uppercase text-[#19B3B1] font-semibold tracking-wide"
+                        : "uppercase text-white hover:text-[#19B3B1] transition tracking-wide"
+                    }
+                  >
+                    <span className="uppercase text-white hover:text-[#19B3B1] transition tracking-wide font-semibold cursor-pointer block py-2 px-3">
+                      {item.name}
+                    </span>
+
+
+                  </NavLink>
                   <div
-                    className={`absolute left-0 mt-1 min-w-[200px] bg-zinc-900 rounded-lg shadow-lg z-50 transition-opacity duration-200 ${hoverDropdown === item.name ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+                    className={`absolute left-0 mt-1 min-w-[200px] bg-zinc-900/80 backdrop-blur-lg rounded-xl shadow-lg z-50 border border-white/10 transition-opacity duration-200 ${hoverDropdown === item.name ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
                       }`}
                   >
                     {item.subpages.map((sub) => (
-                      <NavLink
+                      <a
                         key={sub.name}
-                        to={sub.path}
-                        className={({ isActive }) =>
-                          isActive
-                            ? "block px-4 py-2 text-[#FFA345] font-semibold bg-[#23242A]"
-                            : "block px-4 py-2 text-white hover:bg-[#23242A] transition"
-                        }
+                        href={sub.path}
+                        className="block px-4 py-2 text-white hover:bg-[#23242A] transition rounded-lg"
                       >
                         {sub.name}
-                      </NavLink>
+                      </a>
                     ))}
                   </div>
                 </>
@@ -111,27 +118,27 @@ const Header = () => {
         </nav>
 
         {/* Contact Icon */}
-        <div className="hidden md:flex items-center mr-6">
-          <Link to="/reach-us" className="bg-zinc-900 rounded-full p-2 mr-4">
-            <FaPhoneAlt />
+        <div className="hidden md:flex items-center">
+          <Link to="/reach-us" className="bg-zinc-900/70 backdrop-blur rounded-full p-3 border border-white/10 flex items-center justify-center gap-2">
+            <FaPhoneAlt /> Call Now
           </Link>
         </div>
 
         {/* Social Media Icons */}
-        <div className="hidden md:flex space-x-4">
+        {/* <div className="hidden md:flex space-x-4">
           {socialLinks.map(link => (
-            <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="p-2 bg-emerald-700 rounded-full hover:bg-white hover:text-black transition">
+            <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="p-2 bg-emerald-700 rounded-full hover:bg-white hover:text-black transition border border-white/10">
               {link.icon}
             </a>
           ))}
-        </div>
+        </div> */}
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
-            className="text-white hover:text-[#FFA345] focus:outline-none focus:ring-2 focus:ring-[#FFA345] rounded"
+            className="text-white hover:text-[#19B3B1] focus:outline-none focus:ring-2 focus:ring-[#19B3B1] rounded"
           >
             {mobileMenuOpen ? (
               <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -148,7 +155,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <nav className="md:hidden bg-[#191A1E] shadow-md">
+        <nav className="md:hidden bg-[#191A1E]/80 backdrop-blur-xl shadow-md rounded-b-3xl border-t border-white/10">
           <ul className="flex flex-col py-4 space-y-1">
             {navItems.map((item) => (
               <li key={item.name}>
@@ -158,8 +165,8 @@ const Header = () => {
                     onClick={() => setMobileMenuOpen(false)}
                     className={({ isActive }) =>
                       isActive
-                        ? "block px-4 py-2 uppercase text-[#FFA345] font-semibold border-l-4 border-[#FFA345] bg-[#23242A]"
-                        : "block px-4 py-2 uppercase text-white hover:bg-[#23242A]"
+                        ? "block px-4 py-2 uppercase text-[#19B3B1] font-semibold border-l-4 border-[#19B3B1] bg-[#23242A]/80"
+                        : "block px-4 py-2 uppercase text-white hover:bg-[#23242A]/80"
                     }
                   >
                     {item.name}
@@ -173,13 +180,13 @@ const Header = () => {
                       {item.name}
                     </span>
                     {mobileDropdown === item.name && (
-                      <ul className="ml-6 mt-1">
+                      <ul className="ml-6 mt-1 rounded-xl bg-zinc-900/70 backdrop-blur border border-white/10">
                         {item.subpages.map((sub) => (
                           <li key={sub.name}>
                             <NavLink
                               to={sub.path}
                               onClick={() => setMobileMenuOpen(false)}
-                              className="block px-4 py-2 text-sm text-white hover:text-[#FFA345] hover:bg-[#23242A]"
+                              className="block px-4 py-2 text-sm text-white hover:text-[#19B3B1] hover:bg-[#23242A]/80"
                             >
                               {sub.name}
                             </NavLink>
@@ -193,7 +200,7 @@ const Header = () => {
             ))}
             <li className="flex justify-center space-x-4 mt-4">
               {socialLinks.map(link => (
-                <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="text-[#19B3B1] hover:text-[#FFA345] transition">
+                <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="text-[#19B3B1] hover:text-[#19B3B1] transition">
                   {link.icon}
                 </a>
               ))}
@@ -202,6 +209,7 @@ const Header = () => {
         </nav>
       )}
     </header>
+
   );
 };
 
