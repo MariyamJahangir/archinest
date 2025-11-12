@@ -50,8 +50,8 @@ const Header = () => {
 
 
   return (
-    <header className="fixed w-[90%] px-3 top-0 z-50 text-white bg-black/20 backdrop-blur-lg rounded-[50px] shadow-xl border border-white/20 mx-auto mt-4 left-0 right-0 max-w-7xl">
-      <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
+    <header className="fixed w-[80%] px-3 top-0 z-50 text-white bg-black/20 backdrop-blur-lg rounded-[50px] shadow-xl border border-white/20 mx-auto mt-4 left-0 right-0 ">
+      <div className=" mx-auto px-4 flex justify-between items-center h-20">
         {/* Logo */}
         <div>
           <Link to="/">

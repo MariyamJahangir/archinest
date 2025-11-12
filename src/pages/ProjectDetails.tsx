@@ -36,7 +36,7 @@ const ProjectDetails: React.FC = () => {
 
     <>
       <section
-        className="relative min-h-screen flex flex-col justify-center items-start bg-cover bg-center"
+        className="relative min-h-screen flex flex-col justify-center items-start bg-cover bg-fixed bg-center"
         style={{
           backgroundImage: `url('${mainImage}')` // Replace with your hero/kitchen background image
         }}
@@ -52,27 +52,27 @@ const ProjectDetails: React.FC = () => {
             {project.description}
           </p>
           {/* <button className="border border-white rounded-lg px-7 py-2 text-white font-semibold hover:bg-white/10 transition">
-      Projects
-    </button> */}
+              Projects
+            </button> */}
         </div>
 
         {/* Glassmorphism Bottom Bar (Gallery Grid) */}
         <div className="absolute bottom-0 left-0 right-0 z-20 flex justify-center bg-transparent">
-          <div className="glass-bar grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl px-8 py-4 items-end">
+          <div className="glass-bar grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-7xl px-8 py-4 items-end">
             {/* Card Item Example */}
-            <div className="backdrop-blur-lg bg-white/15 border border-white/30 rounded-lg px-5 py-3 text-white/95 shadow-md flex flex-col">
+            <div className="backdrop-blur-lg bg-white/15 border border-white/30 rounded-lg px-5 py-3 text-white/95 shadow-md flex flex-col h-24">
               <span className="font-semibold mb-1">Burton Str.</span>
               <span className="text-xs">Bamboo, oak and granite—a natural experience</span>
             </div>
-            <div className="backdrop-blur-lg bg-white/15 border border-white/30 rounded-lg px-5 py-3 text-white/95 shadow-md flex flex-col">
+            <div className="backdrop-blur-lg bg-white/15 border border-white/30 rounded-lg px-5 py-3 text-white/95 shadow-md flex flex-col h-24">
               <span className="font-semibold mb-1">Alfreton Road</span>
               <span className="text-xs">Who says concrete is boring? Take a look at this kitchen</span>
             </div>
-            <div className="backdrop-blur-lg bg-white/15 border border-white/30 rounded-lg px-5 py-3 text-white/95 shadow-md flex flex-col">
+            <div className="backdrop-blur-lg bg-white/15 border border-white/30 rounded-lg px-5 py-3 text-white/95 shadow-md flex flex-col h-24">
               <span className="font-semibold mb-1">Grove Avenue</span>
               <span className="text-xs">Building a kitchen in a 200 ft living space</span>
             </div>
-            <div className="backdrop-blur-lg bg-white/15 border border-white/30 rounded-lg px-5 py-3 text-white/95 shadow-md flex flex-col">
+            <div className="backdrop-blur-lg bg-white/15 border border-white/30 rounded-lg px-5 py-3 text-white/95 shadow-md flex flex-col h-24">
               <span className="font-semibold mb-1">Newcastle Dr</span>
               <span className="text-xs">Have you ever seen a waterfall in a kitchen? Here it is</span>
             </div>
@@ -85,7 +85,7 @@ const ProjectDetails: React.FC = () => {
       <section className='bg-cover bg-center bg-fixed'
         style={{ backgroundImage: `url('/sec2bg.jpg')` }}>
         <div className="absolute inset-0 bg-white/20 z-0 pointer-events-none" />
-        <div className="max-w-6xl mx-auto p-12 ">
+        <div className="mx-auto p-12 ">
 
           <h2 className='text-4xl text-center'>Project Gallery</h2>
 
@@ -101,7 +101,7 @@ const ProjectDetails: React.FC = () => {
                 key={i}
                 src={img}
                 alt={`${project.title} ${i + 1}`}
-                className="h-32 w-full object-cover rounded-lg cursor-pointer hover:scale-105 hover:shadow-xl transition"
+                className="h-40 w-full object-cover rounded-lg cursor-pointer hover:scale-105 hover:shadow-xl transition"
                 onClick={() => {
                   setCurrIndex(i);
                   setLightboxOpen(true);
