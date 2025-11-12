@@ -1,156 +1,125 @@
 import { useEffect } from "react";
-import { useLocation } from 'react-router-dom';
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Services = () => {
-
-    const location = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
     if (location.hash) {
-      const id = location.hash.replace('#', '');
+      const id = location.hash.replace("#", "");
       const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
+      if (el) el.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
-    
-    return (
-        <div
-            className="relative bg-cover bg-center bg-fixed"
-            style={{
-                backgroundImage:
-                    "url('https://i.pinimg.com/1200x/ab/16/a8/ab16a8025aadd21e713cf2b18a4727cc.jpg')",
-            }}
+
+  return (
+    <div
+      className="relative bg-cover bg-center bg-fixed"
+      style={{
+        backgroundImage:
+          "url('https://i.pinimg.com/1200x/ab/16/a8/ab16a8025aadd21e713cf2b18a4727cc.jpg')",
+      }}
+    >
+      {/* Top Banner Section */}
+      <section className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[480px] flex items-center justify-center">
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 text-white text-2xl sm:text-4xl md:text-6xl font-bold text-center drop-shadow-xl px-4"
         >
-            {/* Top Banner Section */}
-            <section
-                className="relative w-full h-[320px] md:h-[400px] lg:h-[480px] flex items-center justify-center"
-            >
-                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-                <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="relative z-10 text-white text-4xl md:text-6xl font-bold text-center drop-shadow-xl"
-                >
-                    What We Offer
-                </motion.h1>
-            </section>
+          What We Offer
+        </motion.h1>
+      </section>
 
-    
-            <section
-                id="interiors"
-                className="relative flex items-center justify-end min-h-[80vh] py-12 bg-black overflow-hidden bg-fixed"
-                style={{
-                    backgroundImage:
-                        "url('/sec2bg.jpg')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                }}
-            >
-                {/* Overlay for dark effect */}
-                <div className="absolute inset-0 bg-white bg-opacity-20 z-0" />
-
-                {/* Glassmorphism Card */}
-                <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-10 w-full max-w-md backdrop-blur-sm bg-black/5 rounded-3xl shadow-2xl p-8 border border-black/20">
-                    <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-black">
-                        Interiors <br />Crafted with Passion,<br />Made for You!!
-                    </h2>
-                    <p className="text-md text-black/75 font-medium leading-relaxed">
-                        Have a unique idea or a special project in mind? Archinest is excited to collaborate with you on custom designs.
-                        Contact us today to embark on a furniture journey that transcends ordinary living spaces...
-                    </p>
-                </div>
-
-                {/* Decorative/Optional: main interior image or artwork/sofa if applicable */}
-                <div className="flex-1 flex justify-end z-10">
-                    <img
-                        src="https://i.pinimg.com/1200x/b0/f2/d5/b0f2d50d7b704285ba51643b29e64ce4.jpg"
-                        alt="Interior Design"
-                        className="object-cover rounded-lg shadow-xl w-[60%] max-w-2xl max-h-[90vh]"
-                    />
-                </div>
-            </section>
-
-
-
-
-            <section
-                id="exteriors"
-                className="relative flex items-center justify-end min-h-[80vh] py-12 bg-black/30 overflow-hidden"
-                // style={{
-                //     backgroundImage:
-                //         "url('https://i.pinimg.com/1200x/7e/e2/56/7ee2569fb6fe306ecaad1d18c78ea362.jpg')",
-                //     backgroundSize: "cover",
-                //     backgroundPosition: "center",
-                // }}
-            >
-                {/* Overlay for dark effect */}
-                {/* <div className="absolute inset-0 bg-black bg-opacity-60 z-0" /> */}
-
-                {/* Glassmorphism Card */}
-                <div className="absolute right-8 top-1/2 transform -translate-y-1/2 z-10 w-full max-w-md backdrop-blur-md bg-white/10 rounded-3xl shadow-2xl p-8 border border-white/30">
-                    <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">
-                        Exteriors <br />Crafted with Passion,<br />Made for You!!
-                    </h2>
-                    <p className="text-md text-white/75 font-medium leading-relaxed">
-                        Have a unique idea or a special project in mind? Archinest Associate is excited to collaborate with you on custom designs.
-                        Contact us today to embark on a furniture journey that transcends ordinary living spaces...
-                    </p>
-                </div>
-
-                {/* Decorative/Optional: main interior image or artwork/sofa if applicable */}
-                <div className="flex-1 flex justify-start z-10">
-                    <img
-                        src="https://i.pinimg.com/1200x/7e/e2/56/7ee2569fb6fe306ecaad1d18c78ea362.jpg"
-                        alt="Interior Design"
-                        className="object-cover rounded-lg shadow-xl w-[60%] max-w-2xl max-h-[90vh]"
-                    />
-                </div>
-            </section>
-
-
-       
-
-            <section
-                id="landscaping"
-                className="relative flex items-center justify-end min-h-[80vh] py-12 bg-black overflow-hidden bg-fixed"
-                style={{
-                    backgroundImage:
-                        "url('/sec2bg.jpg')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                }}
-            >
-                {/* Overlay for dark effect */}
-                <div className="absolute inset-0 bg-white bg-opacity-20 z-0" />
-
-                {/* Glassmorphism Card */}
-                <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-10 w-full max-w-md backdrop-blur-sm bg-black/5 rounded-3xl shadow-2xl p-8 border border-black/20">
-                    <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-black">
-                        Landscaping <br />Crafted with Passion,<br />Made for You!!
-                    </h2>
-                    <p className="text-md text-black/75 font-medium leading-relaxed">
-                        Have a unique idea or a special project in mind? JANO ENTERPRISE is excited to collaborate with you on custom designs.
-                        Contact us today to embark on a furniture journey that transcends ordinary living spaces...
-                    </p>
-                </div>
-
-                {/* Decorative/Optional: main interior image or artwork/sofa if applicable */}
-                <div className="flex-1 flex justify-end z-10">
-                    <img
-                        src="https://i.pinimg.com/1200x/d2/97/ac/d297ac33f619089c1647920a99dc4db7.jpg"
-                        alt="Interior Design"
-                        className="object-cover rounded-lg shadow-xl w-[60%] max-w-2xl max-h-[90vh]"
-                    />
-                </div>
-            </section>
-
-
+      {/* Interiors Section */}
+      <section
+        id="interiors"
+        className="relative flex flex-col md:flex-row items-center justify-center min-h-[80vh] py-10 sm:py-12 md:py-16 bg-black overflow-hidden bg-fixed px-4 sm:px-6 lg:px-12"
+        style={{
+          backgroundImage: "url('/sec2bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-white bg-opacity-20 z-0" />
+        <div className="relative z-10 w-full md:w-1/2 backdrop-blur-sm bg-black/5 rounded-3xl shadow-2xl p-5 sm:p-8 border border-black/20 mb-8 md:mb-0 md:mr-6">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold mb-3 sm:mb-4 text-black leading-snug">
+            Interiors <br /> Crafted with Passion, <br /> Made for You!!
+          </h2>
+          <p className="text-sm sm:text-base text-black/75 font-medium leading-relaxed">
+            Have a unique idea or a special project in mind? Archinest is excited
+            to collaborate with you on custom designs. Contact us today to embark
+            on a furniture journey that transcends ordinary living spaces...
+          </p>
         </div>
-    );
-}
+        <div className="flex justify-center md:justify-end w-full md:w-2/3 z-10">
+          <img
+            src="https://i.pinimg.com/1200x/b0/f2/d5/b0f2d50d7b704285ba51643b29e64ce4.jpg"
+            alt="Interior Design"
+            className="object-cover rounded-lg shadow-xl w-[90%] sm:w-[70%] md:w-[80%] max-w-xs sm:max-w-md lg:max-w-lg"
+          />
+        </div>
+      </section>
+
+      {/* Exteriors Section */}
+      <section
+        id="exteriors"
+        className="relative flex flex-col md:flex-row-reverse items-center justify-center min-h-[80vh] py-10 sm:py-12 md:py-16 bg-black/30 overflow-hidden px-4 sm:px-6 lg:px-12"
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-60 z-0" />
+        <div className="relative z-10 w-full md:w-1/2 backdrop-blur-md bg-white/10 rounded-3xl shadow-2xl p-5 sm:p-8 border border-white/30 mb-8 md:mb-0 md:ml-6">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold mb-3 sm:mb-4 text-white leading-snug">
+            Exteriors <br /> Crafted with Passion, <br /> Made for You!!
+          </h2>
+          <p className="text-sm sm:text-base text-white/75 font-medium leading-relaxed">
+            Have a unique idea or a special project in mind? Archinest Associate is
+            excited to collaborate with you on custom designs. Contact us today to
+            embark on a furniture journey that transcends ordinary living spaces...
+          </p>
+        </div>
+        <div className="flex justify-center md:justify-start w-full md:w-2/3 z-10">
+          <img
+            src="https://i.pinimg.com/1200x/7e/e2/56/7ee2569fb6fe306ecaad1d18c78ea362.jpg"
+            alt="Exterior Design"
+            className="object-cover rounded-lg shadow-xl w-[90%] sm:w-[70%] md:w-[80%] max-w-xs sm:max-w-md lg:max-w-lg"
+          />
+        </div>
+      </section>
+
+      {/* Landscaping Section */}
+      <section
+        id="landscaping"
+        className="relative flex flex-col md:flex-row items-center justify-center min-h-[80vh] py-10 sm:py-12 md:py-16 bg-black overflow-hidden bg-fixed px-4 sm:px-6 lg:px-12"
+        style={{
+          backgroundImage: "url('/sec2bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-white bg-opacity-20 z-0" />
+        <div className="relative z-10 w-full md:w-1/2 backdrop-blur-sm bg-black/5 rounded-3xl shadow-2xl p-5 sm:p-8 border border-black/20 mb-8 md:mb-0 md:mr-6">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold mb-3 sm:mb-4 text-black leading-snug">
+            Landscaping <br /> Crafted with Passion, <br /> Made for You!!
+          </h2>
+          <p className="text-sm sm:text-base text-black/75 font-medium leading-relaxed">
+            Have a unique idea or a special project in mind? JANO ENTERPRISE is
+            excited to collaborate with you on custom designs. Contact us today to
+            embark on a furniture journey that transcends ordinary living spaces...
+          </p>
+        </div>
+        <div className="flex justify-center md:justify-end w-full md:w-2/3 z-10">
+          <img
+            src="https://i.pinimg.com/1200x/d2/97/ac/d297ac33f619089c1647920a99dc4db7.jpg"
+            alt="Landscaping Design"
+            className="object-cover rounded-lg shadow-xl w-[90%] sm:w-[70%] md:w-[80%] max-w-xs sm:max-w-md lg:max-w-lg"
+          />
+        </div>
+      </section>
+    </div>
+  );
+};
 
 export default Services;
