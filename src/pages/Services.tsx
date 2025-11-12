@@ -55,7 +55,7 @@ const Services = () => {
             on a furniture journey that transcends ordinary living spaces...
           </p>
         </div>
-        <div className="flex justify-center md:justify-end w-full md:w-2/3 z-10">
+        <div className="flex justify-center md:justify-end w-full md:w-1/2 z-10">
           <img
             src="https://i.pinimg.com/1200x/b0/f2/d5/b0f2d50d7b704285ba51643b29e64ce4.jpg"
             alt="Interior Design"
@@ -80,7 +80,7 @@ const Services = () => {
             embark on a furniture journey that transcends ordinary living spaces...
           </p>
         </div>
-        <div className="flex justify-center md:justify-start w-full md:w-2/3 z-10">
+        <div className="flex justify-center md:justify-start w-full md:w-1/2 z-10">
           <img
             src="https://i.pinimg.com/1200x/7e/e2/56/7ee2569fb6fe306ecaad1d18c78ea362.jpg"
             alt="Exterior Design"
@@ -110,7 +110,7 @@ const Services = () => {
             embark on a furniture journey that transcends ordinary living spaces...
           </p>
         </div>
-        <div className="flex justify-center md:justify-end w-full md:w-2/3 z-10">
+        <div className="flex justify-center md:justify-end w-full md:w-1/2 z-10">
           <img
             src="https://i.pinimg.com/1200x/d2/97/ac/d297ac33f619089c1647920a99dc4db7.jpg"
             alt="Landscaping Design"
