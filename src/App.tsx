@@ -10,11 +10,14 @@ import Contact from './pages/Contact';
 import ProjectDetails from './pages/ProjectDetails';
 import Services from './pages/Services';
 
+import ScrollToTop from './components/ScrollToTop';
+
 
 function App() {
   return (
  
     <Router>
+      <ScrollToTop />
       <FloatingWhatsAppButton/>
       <Routes>
            

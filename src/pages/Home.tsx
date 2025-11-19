@@ -524,30 +524,30 @@ function Home() {
       </section>
 
       <section
-        className="w-full mx-auto py-20 px-4 sm:px-6 overflow-hidden relative bg-fixed bg-cover bg-center"
+        className="mx-auto py-20 px-6 overflow-hidden relative bg-fixed bg-cover bg-center"
         style={{ backgroundImage: "url('/new.jpg')" }}
       >
         {/* Background overlay */}
         <div className="absolute inset-0 bg-black/20 z-0 pointer-events-none"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="relative z-10">
           {/* Text Section */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-emerald-400 mb-4">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-emerald-400 mb-4">
               Recent Projects
             </h2>
-            <p className="text-gray-100 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto px-4">
+            <p className="text-gray-100 text-lg leading-relaxed max-w-2xl mx-auto">
              Discover our latest projects that highlight innovation, elegance, and functionality. 
              Each space is thoughtfully crafted, reflecting our dedication to transforming visions into
               reality with exceptional attention to detail and craftsmanship.
             </p>
           </div>
 
-          {/* Grid Section */}
+          {/* Grid Section - YOUR ORIGINAL CODE PRESERVED */}
           <div
             className="
-                flex flex-col md:flex-row justify-center gap-2 
-                px-4 sm:px-6 md:px-10 transition-all duration-500 ease-in-out
+                flex flex-wrap md:flex-nowrap justify-center gap-2 
+                p-6 md:p-10 transition-all duration-500 ease-in-out
               "
           >
             {row1.map((proj, idx) => {
@@ -570,10 +570,10 @@ function Home() {
                   key={proj.title}
                   className="
           relative rounded-xl overflow-hidden shadow-lg cursor-pointer 
-          transition-all duration-500 ease-in-out w-full
+          transition-all duration-500 ease-in-out
         "
                   style={{
-                    width: window.innerWidth < 768 ? "100%" : width,
+                    width: window.innerWidth < 768 ? "100%" : width, // full width on mobile
                     height: "300px",
                     flexShrink: 0,
                     zIndex: isHovered || defaultExpanded ? 20 : 10,
@@ -680,7 +680,7 @@ function Home() {
             {/* Card 10 */}
             <div className="border border-gray-300 rounded-xl p-6 sm:p-8 flex flex-col items-center text-center bg-white bg-opacity-80 transition-shadow duration-300 hover:shadow-lg">
               <div className="text-5xl sm:text-7xl font-bold mb-2 text-emerald-700">10</div>
-              <div className="text-xl sm:text-2xl font-semibold mb-2">Adaptability</div>
+              <div className="text-xl sm:text-2xl font-semibold mb-2">  Adaptability</div>
               <p className="text-gray-700 text-base sm:text-lg">
                  We evolve with each project—adapting our design approach to suit changing needs, diverse styles, and unique spaces.
               </p>
@@ -688,7 +688,7 @@ function Home() {
             {/* Card 11 */}
             <div className="border border-gray-300 rounded-xl p-6 sm:p-8 flex flex-col items-center text-center bg-white bg-opacity-80 transition-shadow duration-300 hover:shadow-lg">
               <div className="text-5xl sm:text-7xl font-bold mb-2 text-emerald-700">11</div>
-              <div className="text-xl sm:text-2xl font-semibold mb-2">Passion</div>
+              <div className="text-xl sm:text-2xl font-semibold mb-2">  Passion</div>
               <p className="text-gray-700 text-base sm:text-lg">
          Design is our craft and calling. Our passion fuels creativity, pushing us to explore, evolve, and deliver exceptional spaces.
               </p>
@@ -696,7 +696,7 @@ function Home() {
             {/* Card 12 */}
             <div className="border border-gray-300 rounded-xl p-6 sm:p-8 flex flex-col items-center text-center bg-white bg-opacity-80 transition-shadow duration-300 hover:shadow-lg">
               <div className="text-5xl sm:text-7xl font-bold mb-2 text-emerald-700">12</div>
-              <div className="text-xl sm:text-2xl font-semibold mb-2">Reliability</div>
+              <div className="text-xl sm:text-2xl font-semibold mb-2">  Reliability</div>
               <p className="text-gray-700 text-base sm:text-lg">
                 From consultation to completion, we stand by you. Our dependable, committed process ensures a smooth, stress-free experience.
               </p>
@@ -802,3 +802,4 @@ function Home() {
   );
 }
 export default Home;
+
