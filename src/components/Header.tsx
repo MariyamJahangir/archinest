@@ -232,7 +232,6 @@ const navItems = [
     ]
   },
   { name: 'PROJECTS', path: '/projects' },
-
   { name: 'REACH US', path: '/reach-us' }
 ];
 
@@ -249,7 +248,6 @@ const Header = () => {
   const [hoverDropdown, setHoverDropdown] = useState<string | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-
   const handleMouseEnter = (name: string) => {
     if (timerRef.current) {
       clearTimeout(timerRef.current);
@@ -263,7 +261,6 @@ const Header = () => {
       setHoverDropdown(null);
     }, 200);
   };
-
 
   return (
     <header className="fixed w-[80%] px-3 top-0 z-50 text-white bg-black/20 backdrop-blur-lg rounded-[50px] shadow-xl border border-white/20 mx-auto mt-4 left-0 right-0 ">
@@ -297,7 +294,6 @@ const Header = () => {
                 </NavLink>
               ) : (
                 <>
-
                   <NavLink
                     to={item.path}
                     className={({ isActive }) =>
@@ -310,8 +306,6 @@ const Header = () => {
                       {item.name}
                       <FaChevronDown className={`text-xs transition-transform duration-200 ${hoverDropdown === item.name ? 'rotate-180' : ''}`} />
                     </span>
-
-
                   </NavLink>
                   <div
                     className={`absolute left-0 mt-1 min-w-[200px] bg-transparent backdrop-blur-lg rounded-xl shadow-lg z-50 border border-white/10 transition-opacity duration-200 ${hoverDropdown === item.name ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
@@ -321,7 +315,7 @@ const Header = () => {
                       <a
                         key={sub.name}
                         href={sub.path}
-                        className="block px-4 py-2 text-white hover:bg-[#23242A] transition rounded-lg"
+                        className="block px-4 py-2 text-white hover:bg-white/10 transition rounded-lg"
                       >
                         {sub.name}
                       </a>
@@ -339,15 +333,6 @@ const Header = () => {
             <FaPhoneAlt /> Call Now
           </Link>
         </div>
-
-        {/* Social Media Icons */}
-        {/* <div className="hidden md:flex space-x-4">
-          {socialLinks.map(link => (
-            <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="p-2 bg-emerald-700 rounded-full hover:bg-white hover:text-black transition border border-white/10">
-              {link.icon}
-            </a>
-          ))}
-        </div> */}
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
@@ -371,7 +356,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <nav className="md:hidden bg-[#191A1E]/80 backdrop-blur-xl shadow-md rounded-b-3xl border-t border-white/10">
+        <nav className="md:hidden backdrop-blur-xl shadow-md rounded-b-3xl border-t border-white/10">
           <ul className="flex flex-col py-4 space-y-1">
             {navItems.map((item) => (
               <li key={item.name}>
@@ -381,8 +366,8 @@ const Header = () => {
                     onClick={() => setMobileMenuOpen(false)}
                     className={({ isActive }) =>
                       isActive
-                        ? "block px-4 py-2 uppercase text-[#19B3B1] font-semibold border-l-4 border-[#19B3B1] bg-[#23242A]/80"
-                        : "block px-4 py-2 uppercase text-white hover:bg-[#23242A]/80"
+                        ? "block px-4 py-2 uppercase text-[#19B3B1] font-semibold border-l-4 border-[#19B3B1] bg-white/5"
+                        : "block px-4 py-2 uppercase text-white hover:bg-white/5"
                     }
                   >
                     {item.name}
@@ -397,13 +382,13 @@ const Header = () => {
                       <FaChevronDown className={`text-xs transition-transform duration-200 ${mobileDropdown === item.name ? 'rotate-180' : ''}`} />
                     </span>
                     {mobileDropdown === item.name && (
-                      <ul className="ml-6 mt-1 rounded-xl bg-zinc-900/70 backdrop-blur border border-white/10">
+                      <ul className="ml-6 mt-1 rounded-xl backdrop-blur border border-white/10">
                         {item.subpages.map((sub) => (
                           <li key={sub.name}>
                             <NavLink
                               to={sub.path}
                               onClick={() => setMobileMenuOpen(false)}
-                              className="block px-4 py-2 text-sm text-white hover:text-[#19B3B1] hover:bg-[#23242A]/80"
+                              className="block px-4 py-2 text-sm text-white hover:text-[#19B3B1] hover:bg-white/5"
                             >
                               {sub.name}
                             </NavLink>
@@ -426,7 +411,6 @@ const Header = () => {
         </nav>
       )}
     </header>
-
   );
 };
 
