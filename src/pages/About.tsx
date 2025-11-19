@@ -4,12 +4,12 @@ const slides = [
     {
         title: "VISION",
         content:
-            "To consistently deliver eco-friendly world class finishes at each point of our designing, execute and complete all the projects in a manner to create an ambience that will echo the desires of our clients’ hearts.",
+            "To craft eco-friendly, world-class spaces that reflect the deepest desires of our clients We strive to shape every design and completed project into an ambiance that resonates with emotion, purpose, and lasting beauty"
     },
     {
         title: "MISSION",
         content:
-            "Our mission is to transform ideas into elegant environments, providing creative solutions that are sustainable and client-focused. We believe in collaborative design practices, delivering personalized experiences that blend functionality and aesthetic excellence for every project.",
+            "To transform ideas into refined, elegant environments through sustainable and client-focused design solutions.We believe in collaborative creativity—delivering personalized experiences where functionality meets aesthetic excellence, ensuring every project feels meaningful, thoughtful, and uniquely crafted.",
     },
 ];
 
@@ -45,16 +45,11 @@ function About() {
                 <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
                     <div className="flex-1 p-4 text-center md:text-left">
                         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-emerald-800">
-                            Crafting Spaces,<br />
-                            <span className="text-[#19B3B1]">Inspiring Connections</span>
+                          
+                            <span className="text-[#19B3B1]">Creating   <br /> Meaningful Environments</span>
                         </h1>
                         <p className="text-base sm:text-lg text-gray-800 mt-4">
-                            Our studio is guided by a commitment to meaningful design that
-                            elevates everyday living. Driven by curiosity and collaboration,
-                            we create environments where aesthetics and functionality are in
-                            harmony. We approach every project as an opportunity to learn,
-                            innovate, and make a positive impact for our clients and
-                            communities.
+                           Rooted in thoughtful design, we shape spaces where elegance meets purpose. Through collaboration and meticulous attention to detail, we create environments that elevate living and leave a lasting impression.
                         </p>
                     </div>
 
@@ -81,16 +76,11 @@ function About() {
                 <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center md:items-start gap-8">
                     <div className="flex-1 p-4 text-center md:text-left">
                         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
-                            Transforming <br />
-                            <span className="text-amber-500">Vision Into Value</span>
+                          Shaping Stories  <br />
+                            <span className="text-amber-500">Through Spaces</span>
                         </h1>
                         <p className="text-base sm:text-lg text-gray-800 mt-4">
-                            We believe every space tells a story — one that inspires,
-                            comforts, and connects. With a blend of creativity, precision, and
-                            purpose, our team transforms ideas into timeless designs. From
-                            concept to completion, we craft environments that reflect
-                            individuality, enhance well-being, and celebrate the art of living
-                            beautifully.
+                            We create spaces that speak with quiet elegance. Guided by purpose and refined design, we turn vision into environments that feel personal, balanced, and timeless. Every detail is crafted to enhance comfort, well-being, and the art of sophisticated living.
                         </p>
                     </div>
                     <div className="flex-1 w-full max-w-md md:max-w-xl">
@@ -147,10 +137,7 @@ function About() {
                             Hear From Our Happy Clients
                         </h2>
                         <p className="text-white text-base sm:text-lg text-center">
-                            Our clients love our services! Here’s what they have to say about
-                            their experience working with us. We take pride in delivering
-                            exceptional quality and creating lasting relationships with our
-                            customers.
+                           Our clients trust us for our commitment to quality and thoughtful design. Here’s what they have shared about their experience working with us. We take pride in delivering excellence and building lasting relationships along the way.
                         </p>
                     </div>
 

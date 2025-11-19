@@ -91,11 +91,9 @@ function Home() {
               Where Vision Meets <span className="text-[#19B3B1]">Creation</span>
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Established in <span className="font-semibold text-emerald-700">2009</span> by{" "}
-              <span className="font-semibold text-gray-900">Mr. ABC</span>, Archinest Associates Pvt. Ltd
-              was born from a deep passion for redefining design excellence. Inspired by his journey that
-              began in 2005, our studio continues to blend creativity, trust, and innovation to craft
-              timeless spaces that inspire and connect.
+              Founded <span className="font-semibold text-emerald-700">5 years ago</span> by{" "}
+              <span className="font-semibold text-gray-900">Mr Shamnad</span>, Archinest Associates Pvt. Ltd was built on a deep passion for redefining design excellence. Inspired by his creative journey that began in 2019, our studio continues to blend creativity,
+               trust, and innovation to craft timeless spaces that inspire and connect
             </p>
           </div>
 
@@ -138,8 +136,9 @@ function Home() {
               Recent Projects
             </h2>
             <p className="text-gray-100 text-lg leading-relaxed max-w-2xl mx-auto">
-              Explore our latest projects that showcase innovation, elegance, and functionality.
-              Each design reflects our commitment to turning visions into reality with impeccable craftsmanship.
+             Discover our latest projects that highlight innovation, elegance, and functionality. 
+             Each space is thoughtfully crafted, reflecting our dedication to transforming visions into
+              reality with exceptional attention to detail and craftsmanship.
             </p>
           </div>
 
@@ -219,7 +218,7 @@ function Home() {
               <div className="text-7xl font-bold mb-2 text-emerald-700">01</div>
               <div className="text-2xl font-semibold mb-2">Collaboration</div>
               <p className="text-gray-700 text-lg">
-                We work closely with our clients and team at every stage, ensuring each project is fueled by shared inspiration, dialogue, and respect.
+              Design thrives through partnership. We work closely with our clients and team, shaping every project with shared vision, open dialogue, and mutual respect.
               </p>
             </div>
             {/* Card 2 */}
@@ -227,7 +226,7 @@ function Home() {
               <div className="text-7xl font-bold mb-2 text-emerald-700">02</div>
               <div className="text-2xl font-semibold mb-2">Integrity</div>
               <p className="text-gray-700 text-lg">
-                Honesty and transparency are our cornerstones. We deliver what we promise with clear intent and ethical practice at every step.
+               Honesty and transparency guide every decision. We deliver what we promise, with clarity, sincerity, and unwavering ethical standards.
               </p>
             </div>
             {/* Card 3 */}
@@ -235,9 +234,84 @@ function Home() {
               <div className="text-7xl font-bold mb-2 text-emerald-700">03</div>
               <div className="text-2xl font-semibold mb-2">Excellence</div>
               <p className="text-gray-700 text-lg">
-                We pay attention to detail and craftsmanship, striving to exceed expectations and set new standards for quality in every project.
+               Every detail matters. Through refined craftsmanship and commitment to quality, we create spaces that elevate living and withstand time.
               </p>
             </div>
+            {/* Card 4 */}
+            <div className="border border-gray-300 rounded-xl p-8  flex flex-col items-center text-center bg-white bg-opacity-80 transition-shadow duration-300 hover:shadow-lg">
+              <div className="text-7xl font-bold mb-2 text-emerald-700">04</div>
+              <div className="text-2xl font-semibold mb-2">Innovation</div>
+              <p className="text-gray-700 text-lg">
+                We embrace new ideas, technologies, and design concepts—bringing fresh, modern, and intelligent solutions to every project.
+              
+              </p>
+            </div>
+            {/* Card 5 */}
+            <div className="border border-gray-300 rounded-xl p-8  flex flex-col items-center text-center bg-white bg-opacity-80 transition-shadow duration-300 hover:shadow-lg">
+              <div className="text-7xl font-bold mb-2 text-emerald-700">05</div>
+              <div className="text-2xl font-semibold mb-2">Sustainability</div>
+              <p className="text-gray-700 text-lg">
+                Our designs reflect thoughtful choices, eco-friendly materials, and long-lasting solutions that respect the environment and future generations
+              
+              </p>
+            </div>
+            {/* Card 6 */}
+            <div className="border border-gray-300 rounded-xl p-8  flex flex-col items-center text-center bg-white bg-opacity-80 transition-shadow duration-300 hover:shadow-lg">
+              <div className="text-7xl font-bold mb-2 text-emerald-700">06</div>
+              <div className="text-2xl font-semibold mb-2">Client-Centric Approach</div>
+              <p className="text-gray-700 text-lg">
+               Your vision leads the way. We listen, understand, and tailor each design to reflect your lifestyle, needs, and aspirations.
+              </p>
+            </div>
+            {/* Card 7 */}
+            <div className="border border-gray-300 rounded-xl p-8  flex flex-col items-center text-center bg-white bg-opacity-80 transition-shadow duration-300 hover:shadow-lg">
+              <div className="text-7xl font-bold mb-2 text-emerald-700">07</div>
+              <div className="text-2xl font-semibold mb-2">Craftsmanship</div>
+              <p className="text-gray-700 text-lg">
+            Precision and artistry define our work. From structure to finish, every element is crafted with care and intention.
+              </p>
+            </div>
+            {/* Card 8 */}
+            <div className="border border-gray-300 rounded-xl p-8  flex flex-col items-center text-center bg-white bg-opacity-80 transition-shadow duration-300 hover:shadow-lg">
+              <div className="text-7xl font-bold mb-2 text-emerald-700">08</div>
+              <div className="text-2xl font-semibold mb-2">Transparency</div>
+              <p className="text-gray-700 text-lg">
+          We maintain clear communication, open processes, and honest timelines—so you always know what’s happening and why.
+              </p>
+            </div>
+            {/* Card 9 */}
+            <div className="border border-gray-300 rounded-xl p-8  flex flex-col items-center text-center bg-white bg-opacity-80 transition-shadow duration-300 hover:shadow-lg">
+              <div className="text-7xl font-bold mb-2 text-emerald-700">09</div>
+              <div className="text-2xl font-semibold mb-2"> Responsibility</div>
+              <p className="text-gray-700 text-lg">
+              We take ownership of every detail, ensuring timelines, budgets, and quality standards are upheld with consistency.
+              </p>
+            </div>
+            {/* Card 10 */}
+            <div className="border border-gray-300 rounded-xl p-8  flex flex-col items-center text-center bg-white bg-opacity-80 transition-shadow duration-300 hover:shadow-lg">
+              <div className="text-7xl font-bold mb-2 text-emerald-700">10</div>
+              <div className="text-2xl font-semibold mb-2">  Adaptability</div>
+              <p className="text-gray-700 text-lg">
+                 We evolve with each project—adapting our design approach to suit changing needs, diverse styles, and unique spaces.
+              </p>
+            </div>
+            {/* Card 11 */}
+            <div className="border border-gray-300 rounded-xl p-8  flex flex-col items-center text-center bg-white bg-opacity-80 transition-shadow duration-300 hover:shadow-lg">
+              <div className="text-7xl font-bold mb-2 text-emerald-700">11</div>
+              <div className="text-2xl font-semibold mb-2">  Passion</div>
+              <p className="text-gray-700 text-lg">
+         Design is our craft and calling. Our passion fuels creativity, pushing us to explore, evolve, and deliver exceptional spaces.
+              </p>
+            </div>
+            {/* Card 12 */}
+            <div className="border border-gray-300 rounded-xl p-8  flex flex-col items-center text-center bg-white bg-opacity-80 transition-shadow duration-300 hover:shadow-lg">
+              <div className="text-7xl font-bold mb-2 text-emerald-700">12</div>
+              <div className="text-2xl font-semibold mb-2">  Reliability</div>
+              <p className="text-gray-700 text-lg">
+                From consultation to completion, we stand by you. Our dependable, committed process ensures a smooth, stress-free experience.
+              </p>
+            </div>
+           
           </div>
         </div>
 
@@ -257,9 +331,9 @@ function Home() {
       Voices That <span className="text-emerald-700">Inspire</span>
     </h2>
     <p className="text-gray-700 text-sm sm:text-base md:text-lg mt-2">
-      “Every project tells a story — of trust, transformation, and timeless design.
+    “Each space we create carries a story — woven with trust, shaped through transformation, and finished with timeless design.
       <br className="hidden sm:block" />
-      Hear from those who’ve experienced our craft and discover how we turn visions into reality.”
+       Listen to the experiences of those who’ve walked this journey with us and see how dreams become reality.”
     </p>
   </div>
 

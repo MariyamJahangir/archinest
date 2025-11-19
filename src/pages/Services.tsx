@@ -47,12 +47,10 @@ const Services = () => {
         <div className="absolute inset-0 bg-white bg-opacity-20 z-0" />
         <div className="relative z-10 w-full md:w-1/2 backdrop-blur-sm bg-black/5 rounded-3xl shadow-2xl p-5 sm:p-8 border border-black/20 mb-8 md:mb-0 md:mr-6">
           <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold mb-3 sm:mb-4 text-black leading-snug">
-            Interiors <br /> Crafted with Passion, <br /> Made for You!!
+            <br /> Designed with Heart,  <br /> Built for You
           </h2>
           <p className="text-sm sm:text-base text-black/75 font-medium leading-relaxed">
-            Have a unique idea or a special project in mind? Archinest is excited
-            to collaborate with you on custom designs. Contact us today to embark
-            on a furniture journey that transcends ordinary living spaces...
+           Dreaming of a unique space? Share your ideas with us. At Archinest, we transform imagination into beautifully crafted interiors that feel meaningful, inviting, and authentically yours. Every element is thoughtfully curated to create a space that reflects your personality and enhances your everyday living.
           </p>
         </div>
         <div className="flex justify-center md:justify-end w-full md:w-1/2 z-10">
@@ -72,12 +70,10 @@ const Services = () => {
         <div className="absolute inset-0 bg-black bg-opacity-60 z-0" />
         <div className="relative z-10 w-full md:w-1/2 backdrop-blur-md bg-white/10 rounded-3xl shadow-2xl p-5 sm:p-8 border border-white/30 mb-8 md:mb-0 md:ml-6">
           <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold mb-3 sm:mb-4 text-white leading-snug">
-            Exteriors <br /> Crafted with Passion, <br /> Made for You!!
+            <br /> Crafted with Passion, <br />Designed for Impact
           </h2>
           <p className="text-sm sm:text-base text-white/75 font-medium leading-relaxed">
-            Have a unique idea or a special project in mind? Archinest Associate is
-            excited to collaborate with you on custom designs. Contact us today to
-            embark on a furniture journey that transcends ordinary living spaces...
+           Whether it’s a fresh façade or a special outdoor project, Archinest Associates works closely with you to design exteriors that stand out with elegance and purpose. Let’s build an outdoor environment that enhances your lifestyle and transforms the way you experience your space.
           </p>
         </div>
         <div className="flex justify-center md:justify-start w-full md:w-1/2 z-10">
@@ -102,12 +98,10 @@ const Services = () => {
         <div className="absolute inset-0 bg-white bg-opacity-20 z-0" />
         <div className="relative z-10 w-full md:w-1/2 backdrop-blur-sm bg-black/5 rounded-3xl shadow-2xl p-5 sm:p-8 border border-black/20 mb-8 md:mb-0 md:mr-6">
           <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold mb-3 sm:mb-4 text-black leading-snug">
-            Landscaping <br /> Crafted with Passion, <br /> Made for You!!
+             <br />Elegant Outdoors,<br />   Thoughtfully Designed
           </h2>
           <p className="text-sm sm:text-base text-black/75 font-medium leading-relaxed">
-            Have a unique idea or a special project in mind? JANO ENTERPRISE is
-            excited to collaborate with you on custom designs. Contact us today to
-            embark on a furniture journey that transcends ordinary living spaces...
+           We shape outdoor environments with sophistication and purpose. Share your vision with us, and together we’ll create landscapes that offer beauty, balance, and timeless appeal. Every space we design is crafted to elevate your outdoor living experience and bring nature closer to your everyday life.
           </p>
         </div>
         <div className="flex justify-center md:justify-end w-full md:w-1/2 z-10">

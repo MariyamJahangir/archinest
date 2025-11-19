@@ -3,17 +3,21 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 import About from './pages/About';
-
+import { FloatingWhatsAppButton } from './pages/FloatingWhatsAppButton';
 
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import ProjectDetails from './pages/ProjectDetails';
 import Services from './pages/Services';
 
+
 function App() {
   return (
+ 
     <Router>
+      <FloatingWhatsAppButton/>
       <Routes>
+           
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="who-we-are" element={<About />} />
