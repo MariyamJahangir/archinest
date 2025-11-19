@@ -264,7 +264,7 @@ const Header = () => {
 
   return (
     <header className="fixed w-[80%] px-3 top-0 z-50 text-white bg-black/20 backdrop-blur-lg rounded-[50px] shadow-xl border border-white/20 mx-auto mt-4 left-0 right-0 ">
-      <div className=" mx-auto px-4 flex justify-between items-center h-20">
+      <div className=" mx-auto px-4 flex justify-between items-center h-[50px]">
         {/* Logo */}
         <div>
           <Link to="/">
@@ -329,7 +329,7 @@ const Header = () => {
 
         {/* Contact Icon */}
         <div className="hidden md:flex items-center">
-          <Link to="/reach-us" className="bg-zinc-900/70 backdrop-blur rounded-full p-3 border border-white/10 flex items-center justify-center gap-2">
+          <Link to="/reach-us" className=" bg-emerald-600 hover:bg-[#19B3B1] backdrop-blur rounded-full p-2 border border-white/10 flex items-center justify-center gap-1">
             <FaPhoneAlt /> Call Now
           </Link>
         </div>

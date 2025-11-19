@@ -9,7 +9,7 @@ const slides = [
     {
         title: "MISSION",
         content:
-            "To transform ideas into refined, elegant environments through sustainable and client-focused design solutions.We believe in collaborative creativity—delivering personalized experiences where functionality meets aesthetic excellence, ensuring every project feels meaningful, thoughtful, and uniquely crafted.",
+            "To transform ideas into refined, elegant environments through sustainable and client-focused design solutions.We believe in collaborative creativity delivering personalized experiences where functionality meets aesthetic excellence, ensuring every project feels meaningful, thoughtful, and uniquely crafted.",
     },
 ];
 
@@ -26,10 +26,20 @@ function About() {
                         "url('https://i.pinimg.com/1200x/2d/82/fa/2d82faf12aab64c7b2f1a87078417d82.jpg')",
                 }}
             >
-                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-                <h1 className="relative z-10 text-white text-3xl sm:text-4xl md:text-6xl font-bold text-center drop-shadow-xl px-4">
-                    Who We Are
-                </h1>
+               <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+
+<div className="relative z-10 text-center text-white px-4">
+    <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold drop-shadow-xl">
+        Who We Are
+    </h1>
+
+    <p className="mt-3 text-sm sm:text-base md:text-lg drop-shadow-xl">
+        Over the years, Archinest Associates has grown from a small design initiative 
+        into a full-fledged, multidisciplinary firm known for delivering projects 
+        with precision, purpose, and personality.
+    </p>
+</div>
+
             </section>
 
             {/* About Sections */}

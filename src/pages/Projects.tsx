@@ -31,19 +31,23 @@ function Projects() {
                 <div className="absolute inset-0 bg-white/20 z-0 pointer-events-none" />
                 <div className="relative z-10">
                     {/* Filter/toggle buttons */}
-                    <div className="flex gap-4 mb-8 justify-center">
-                        {PROJECT_TYPES.map((type) => (
-                            <button
-                                key={type}
-                                onClick={() => setActiveType(type)}
-                                className={`px-6 py-2 rounded border border-gray-400 transition
-                        ${activeType === type ? "bg-gray-300 text-gray-900 shadow font-semibold" : "bg-gray-300/60 text-gray-900"}
-                        `}
-                            >
-                                {type}
-                            </button>
-                        ))}
-                    </div>
+                   <div className="flex gap-4 mb-8 justify-center">
+  {PROJECT_TYPES.map((type) => (
+    <button
+      key={type}
+      onClick={() => setActiveType(type)}
+      className={`px-7 py-2.5 rounded-full border transition-all duration-300
+        ${
+          activeType === type
+            ? "bg-gray-300 text-gray-900 border-gray-500 shadow-md scale-105"
+            : "bg-gray-300/60 text-gray-900 border-gray-400 hover:bg-gray-300"
+        }
+      `}
+    >
+      {type}
+    </button>
+  ))}
+</div>
 
                     {/* Card grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 max-w-6xl mx-auto">

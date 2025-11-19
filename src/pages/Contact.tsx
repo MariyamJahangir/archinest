@@ -288,7 +288,7 @@ function Contact() {
               />
               <button
                 type="submit"
-                className="w-fit px-7 py-3 rounded-lg bg-white/20 text-white shadow-md hover:bg-white/30 transition"
+                className="w-fit px-7 py-3 rounded-lg  text-white shadow-md bg-emerald-600 hover:bg-[#19B3B1] transition"
               >
                 Submit your application
               </button>
@@ -302,7 +302,9 @@ function Contact() {
               <h3 className="text-2xl font-semibold mb-4">Company Info</h3>
               <div className="flex items-center gap-3">
                 <FaMapMarkerAlt />
-                <span>1234 Design Street, City, Country</span>
+                <span>Archinest Associates pvt Ltd 
+2nd floor Medayil Building 
+Kallambalam 695605</span>
               </div>
               <div className="flex items-center gap-3">
                 <FaPhoneAlt />
@@ -316,8 +318,14 @@ function Contact() {
               </div>
 
               <div className="flex gap-4 mt-4">
-                <a href="#" className="text-white/80 hover:text-white">
+                <a href="https://www.instagram.com/archinest_associate?igsh=MTJvMWZpYnB2aGx4eA==" className="text-white/80 hover:text-white">
                   <FaInstagram size={24} />
+                </a>
+                <a href="#" className="text-white/80 hover:text-white">
+                  <FaFacebookF size={24} />
+                </a>
+                <a href="#" className="text-white/80 hover:text-white">
+                  <FaTelegramPlane size={24} />
                 </a>
               </div>
             </div>

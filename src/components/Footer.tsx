@@ -185,11 +185,13 @@ function Footer() {
                 <span className="text-3xl mb-2">🏢</span>
                 <div className="font-semibold text-lg"> OFFICE</div>
                 <div className="text-center text-gray-300 text-sm mb-2">
-                  1nd Floor, fsdfsfds, adfsvsfsdf Rd, sfsgsgfs P.O,<br />
-                  sdfsf, sdsfsdfsfd, Kochi, Ernakulam, Kerala 682020
+                  Archinest Associates pvt Ltd 
+2nd floor Medayil Building 
+Kallambalam 695605<br />
+                  
                 </div>
                 <a
-                  href="https://goo.gl/maps/example"
+                  href="https://maps.app.goo.gl/AcX3kKAntygwf54h6"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-2 px-4 py-2 border rounded-lg hover:bg-white hover:text-black transition"
@@ -203,7 +205,7 @@ function Footer() {
         {/* About/desc (hidden on mobile) */}
         <div className="flex-2 flex flex-col items-center">
           <p className="mt-4 max-w-md text-gray-300 text-sm leading-relaxed px-10">
-            At Archinest Associates Pvt Ltd, imagination blends seamlessly with precision. Established in 2015 by a passionate designer, We are dedicated to creating personalized interior concepts that capture each client's individuality. 
+            At Archinest Associates Pvt Ltd, imagination blends seamlessly with precision. Established in 2020 by a passionate designer, We are dedicated to creating personalized interior concepts that capture each client's individuality. 
           </p>
         </div>
       </div>
@@ -220,8 +222,8 @@ function Footer() {
           <ul>
             <li className="mb-1 hover:underline"><a href="/who-we-are">Who We Are</a></li>
             <li className="mb-1 hover:underline"><a href="/projects">Projects</a></li>
-            <li className="mb-1 hover:underline"><a href="/careers">Careers</a></li>
-            <li className="mb-1 hover:underline"><a href="/contact-us">Contact Us</a></li>
+           
+            <li className="mb-1 hover:underline"><a href="/reach-us">Contact Us</a></li>
           </ul>
         </div>
 
@@ -229,9 +231,9 @@ function Footer() {
         <div className="text-center md:text-left">
           <div className="font-bold text-lg mb-2">Services</div>
           <ul>
-            <li className="mb-1">Turnkey Projects</li>
-            <li className="mb-1">Interior Design</li>
-            <li className="mb-1">Landscape</li>
+            <li className="mb-1">Interiors</li>
+            <li className="mb-1">   Exteriors</li>
+            <li className="mb-1">Landscaping</li>
           </ul>
         </div>
 
@@ -239,10 +241,10 @@ function Footer() {
         <div className="text-center md:text-left">
           <div className="font-bold text-lg mb-2">Get In Touch</div>
           <div className="flex items-center justify-center md:justify-start mb-1">
-            <FaPhoneAlt className="mr-2" /> 0484-123 4567
+            <FaPhoneAlt className="mr-2" /> 9037813345 
           </div>
           <div className="flex items-center justify-center md:justify-start mb-1">
-            <FaWhatsapp className="mr-2" /> +91 12345 67890
+            <FaWhatsapp className="mr-2" /> +91 90378 13345
           </div>
           <div className="flex items-center justify-center md:justify-start mb-1">
             <FaEnvelope className="mr-2" /> info@archinest.com
@@ -251,7 +253,7 @@ function Footer() {
           <div className="flex space-x-3 mt-3 justify-center md:justify-start">
             <a href="https://facebook.com" className="p-2 bg-emerald-700 rounded-full hover:bg-white hover:text-black transition"><FaFacebookF /></a>
             <a href="https://instagram.com" className="p-2 bg-emerald-700 rounded-full hover:bg-white hover:text-black transition"><FaInstagram /></a>
-            <a href="https://youtube.com" className="p-2 bg-emerald-700 rounded-full hover:bg-white hover:text-black transition"><FaYoutube /></a>
+           
             <a href="https://linkedin.com" className="p-2 bg-emerald-700 rounded-full hover:bg-white hover:text-black transition"><FaLinkedin /></a>
           </div>
         </div>
