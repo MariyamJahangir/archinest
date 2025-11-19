@@ -19,7 +19,7 @@ export const FloatingWhatsAppButton: React.FC<WhatsAppButtonProps> = ({
 
  const handleWhatsAppClick = () => {
   const encodedMessage = encodeURIComponent(customMessage.trim());
-  const url = `https://api.whatsapp.com/send?phone=919895299633&text=${encodedMessage}`;
+  const url = `https://api.whatsapp.com/send?phone=919037813345&text=${encodedMessage}`;
   window.open(url, "_blank");
 };
 

@@ -325,22 +325,23 @@ function Contact() {
         </div>
       </section>
 
-      {/* Google Maps Section */}
-      <section className="w-full bg-gray-100 py-10 px-4">
-        <div className="max-w-4xl mx-auto">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7307.559240570725!2d76.78774826577504!3d8.761370118883828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05e996fd7b8bbf%3A0x6355bee8f140cb65!2sDream%20home%20Designers!5e0!3m2!1sen!2sin!4v1763547734552!5m2!1sen!2sin"
-            width="100%"
-            height="350"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="rounded-lg shadow-lg"
-            title="Dream Home Designers Location"
-          ></iframe>
-        </div>
-      </section>
+     {/* Google Maps Section */}
+<section className="w-full bg-gray-100 py-10 p-0">
+  <div className="w-full">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7307.559240570725!2d76.78774826577504!3d8.761370118883828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05e996fd7b8bbf%3A0x6355bee8f140cb65!2sDream%20home%20Designers!5e0!3m2!1sen!2sin!4v1763547734552!5m2!1sen!2sin"
+      width="100%"
+      height="350"
+      style={{ border: 0 }}
+      allowFullScreen={true}
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      className="rounded-lg shadow-lg w-full"
+      title="Dream Home Designers Location"
+    ></iframe>
+  </div>
+</section>
+
     </>
   );
 }
