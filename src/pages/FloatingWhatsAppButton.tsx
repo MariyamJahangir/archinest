@@ -115,7 +115,7 @@ export const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
 }) => {
  const handleClick = () => {
   const encodedMessage = encodeURIComponent(message.trim());
-  const url = `https://api.whatsapp.com/send?phone=919895299633&text=${encodedMessage}`;
+  const url = `https://api.whatsapp.com/send?phone=+919037813345&text=${encodedMessage}`;
   window.open(url, "_blank");
 };
 
@@ -144,7 +144,7 @@ export default function WhatsAppDemo() {
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Inline Button</h2>
           <p className="text-gray-600 mb-6">Click to open WhatsApp with a pre-filled message</p>
          <WhatsAppButton  
-    phoneNumber="919895299633"
+    phoneNumber="919037813345"
     message="Hi! I'd like to know more about your services."
     buttonText="Contact Us on WhatsApp"
 />
@@ -170,7 +170,7 @@ export default function WhatsAppDemo() {
 
       {/* Floating WhatsApp Button */}
       <FloatingWhatsAppButton  
-    phoneNumber="919895299633"
+    phoneNumber="919037813345"
     message="Hello! I'm interested in learning more."
 />
 
