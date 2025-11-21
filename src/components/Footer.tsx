@@ -161,7 +161,7 @@ function Footer() {
         </div>
         <div className="flex flex-col justify-center w-80">
           <div className="text-2xl font-bold mb-2 text-white">Connect With Us</div>
-          <div className="text-4xl font-medium mb-2 text-white">+91 98952 99633</div>
+          <div className="text-4xl font-medium mb-2 text-white">+91 90378 13345</div>
         </div>
         <div className="flex-1">
           <p className="text-white text-base">
